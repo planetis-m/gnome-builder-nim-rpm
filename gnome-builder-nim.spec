@@ -43,6 +43,7 @@ Summary:        IDE for writing GNOME-based software
 License:        GPL-3.0-or-later AND GPL-2.0-or-later AND LGPL-3.0-or-later AND LicenseRef-Callaway-LGPLv2+ AND LicenseRef-Callaway-MIT AND LicenseRef-Callaway-CC-BY-SA AND CC0-1.0
 URL:            https://wiki.gnome.org/Apps/Builder
 Source0:        https://download.gnome.org/sources/%{_name}/49/%{_name}-%{tarball_version}.tar.xz
+Patch0:         gnome-builder-49-nim-ctags.patch
 
 BuildRequires:  clang-devel
 BuildRequires:  ctags
