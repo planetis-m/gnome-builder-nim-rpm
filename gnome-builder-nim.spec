@@ -19,7 +19,7 @@
 %global _name gnome-builder
 
 Name:           %{_name}-nim
-Version:        49.1
+Version:        50.0
 Release:        %autorelease
 Summary:        IDE for writing GNOME-based software
 
@@ -40,10 +40,10 @@ Summary:        IDE for writing GNOME-based software
 #     - data/org.gnome.Builder.appdata.xml
 #     - data/html-preview.png
 # Automatically converted from old format: GPLv3+ and GPLv2+ and LGPLv3+ and LGPLv2+ and MIT and CC-BY-SA and CC0 - review is highly recommended.
-License:        GPL-3.0-or-later AND GPL-2.0-or-later AND LGPL-3.0-or-later AND LicenseRef-Callaway-LGPLv2+ AND LicenseRef-Callaway-MIT AND LicenseRef-Callaway-CC-BY-SA AND CC0-1.0
+License:        GPL-3.0-or-later AND GPL-2.0-or-later AND LGPL-3.0-or-later AND LGPL-2.1-or-later AND LGPL-2.0-or-later AND MIT AND CC0-1.0 AND CC-BY-3.0
 URL:            https://wiki.gnome.org/Apps/Builder
-Source0:        https://download.gnome.org/sources/%{_name}/49/%{_name}-%{tarball_version}.tar.xz
-Patch0:         gnome-builder-49-nim-ctags.patch
+Source0:        https://download.gnome.org/sources/%{_name}/50/%{_name}-%{tarball_version}.tar.xz
+Patch0:         gnome-builder-50-nim-ctags.patch
 
 BuildRequires:  clang-devel
 BuildRequires:  ctags
