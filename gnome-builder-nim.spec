@@ -45,13 +45,11 @@ URL:            https://wiki.gnome.org/Apps/Builder
 Source0:        https://download.gnome.org/sources/%{_name}/50/%{_name}-%{tarball_version}.tar.xz
 Patch0:         gnome-builder-50-nim-ctags.patch
 
-BuildRequires:  clang-devel
 BuildRequires:  ctags
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
 BuildRequires:  gtk-doc
 BuildRequires:  itstool
-BuildRequires:  llvm-devel
 BuildRequires:  meson
 BuildRequires:  pkgconfig(editorconfig)
 BuildRequires:  pkgconfig(enchant-2)
@@ -93,8 +91,6 @@ Requires:       libpeas-loader-gjs%{?_isa} >= %{libpeas_version}
 Requires:       libspelling%{?_isa} >= %{libspelling_version}
 Requires:       template-glib%{?_isa} >= %{template_glib_version}
 
-Recommends:     clang
-Recommends:     clang-tools-extra
 Recommends:     ctags
 Recommends:     meson
 Recommends:     sysprof-agent
@@ -121,7 +117,7 @@ developing applications that use %{_name}.
 %autosetup -p1 -n %{_name}-%{tarball_version}
 
 %build
-%meson -Dhelp=true -Dplugin_flatpak=false
+%meson -Dhelp=true -Dplugin_flatpak=false -Dplugin_clang=false
 %meson_build
 
 %install
@@ -140,7 +136,6 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/org.gnome.Builder.des
 %license COPYING
 %{_bindir}/gnome-builder
 %{_libdir}/gnome-builder/
-%{_libexecdir}/gnome-builder-clang
 %{_libexecdir}/gnome-builder-git
 %{_datadir}/applications/org.gnome.Builder.desktop
 %{_datadir}/dbus-1/services/org.gnome.Builder.service
